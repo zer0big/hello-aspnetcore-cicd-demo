@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: zerbighelloaspnetcorecicddemo 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: zerbighelloaspnetcorecicddemo 
+    spec:
+      containers:
+        - name: zerbighelloaspnetcorecicddemo 
+          image: zerodemoacr.azurecr.io/zerbighelloaspnetcorecicddemo
+          ports:
+          - containerPort: 8080
